@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+:root {
+    --primary: #fffef7;
+    --light: #ffffff;
+    --dark: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+
+display: flex;
+align-items: flex;
+justify-content: space-between;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: linear-gradient(236deg, #ca9c7f 25%, #f5e6da 100%);
+    padding:16px 32px;
+}
+
+
+h1 {
+    color: #b97742;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.hamburger{
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    user-select: none;
+
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: var(--light);
+    border-radius: 6px;
+    z-index: 1;
+
+transform-origin: 0 0;
+
+transition: 0.4s;
+}
+
+/*
+This hamburger code will allow you to edit your "hamburger"
+*/
+
+.hamburger:hover span:nth-child(2) {
+    transform: translateX(10px);
+    background-color: var(--primary);
+}
+
+.hamburger.is-active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+.hamburger.is-active:hover span {
+background-color: var(--primary);
+}
+
+
+.menu   {
+display: none;
+flex: 1 1 0%;
+justify-content: flex-end;
+margin: 0 -16px;
+}
+
+.menu a {
+    color: #91643f;
+    margin: 0 16px;
+    font-weight: 100;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.menu a:hover {
+    color: var(--primary);
+}
+
+@media (min-width: 768px) {
+    .hamburger { 
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+}
+
+/* 
+This is the end of the nav bar and the beginning of the background
+*/
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, #e5c6b4 0.9%, #ca9c7f 41%, #a47451 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto
+}
+
+
+/* THIS WILL STYLE THE IMAGES AND QUOTES ON THE HOME PAGE*/
+
+
+.inner
+{
+	width:100%;
+	height:100vh;
+	background:transparent;
+	display:flex;
+	text-align:center;
+	align-items:center;
+	transition:all 0.3s linear;
+	z-index:0;
+	border-radius:3px;
+	background-size:cover;
+}
+.prod-logo
+{
+    width: 7%;
+    height: 100vh;
+	position:absolute;
+	left:0;right:0;
+	z-index:1;
+	padding:20px 0 0 20px;
+}
+.prod-img
+{
+	width:70px;
+	height:70px;
+	margin:0px auto;
+	border-radius:3px;
+	padding:5px;
+	transition: background 0.3s linear;
+}
+.prod-left
+{
+	width:55%;
+	text-align:left;
+	padding-left:75px;
+}
+.prod-right
+{
+	width:45%;
+}
+.prod-human-img
+{
+	width:500px;
+	height:500px;
+}
+.prod-head
+{
+  font-family: 'Sintony', sans-serif;
+	margin-left:-5px !important;
+	text-align:left;
+	font-weight:800;
+	font-size:60pt;
+	color:#f5e6da;
+	margin:0;
+}
+.prod-head-sub
+{
+    font-weight:400;
+	font-size:25pt;
+	color:#f5e6da;
+	margin:0 auto;
+}
+
+.post{
+  display:inline-flex;
+  max-width: 100%;
+  box-sizing: content-box;
+  width:100%;
+  height:100%;
+  padding: 10px;
+  border-radius:10px;
+  box-shadow: 0 3px 10px #00000024;
+  margin:20px;
+  max-width:300px;
+  transition:ease 0.5s;
+  opacity:0.5!important;
+}
+.post > *{
+  max-width:80%;
+}
+.post:hover{
+  opacity:1!important;
+  transform:scale(1.04);
+}
+
+.post > iframe > html > body > div > div > div > .Username{
+  color:red;
+}
+
+.logo,
+h3 {
+    padding-left: 400px;
+  padding-bottom: 30px;
+    margin:10px;
+    line-height: 1;
+  font-family: 'Sintony', sans-serif;
+    font-size: 2.5rem;
+  	color:#e5c6b4;
+}
